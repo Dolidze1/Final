@@ -1,0 +1,85 @@
+<div class="div" style="background-image: url('https://i.pinimg.com/originals/1c/85/34/1c8534b9eb50ea5c14b16872e7881001.png');"> 
+
+ 
+ 
+    
+ 
+ 
+ <div class="contact">
+
+  <div class="info">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.8835698001535!2d44.78761431573434!3d41.7230311830825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404472cdf8e6b329%3A0x316d4c4991b44fc3!2sDinamo%20Arena%20Stadium!5e0!3m2!1sen!2sge!4v1617555703946!5m2!1sen!2sge" width="300" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+   </div>
+    
+     <div class="form-group" id="formi">
+        
+        <form  [formGroup]="contactForm"  >
+           
+            <input type="text" name="name"  id="name" class="form-control"   placeholder="Enter name..." [(ngModel)]="contactName" formControlName="nameControl" >
+        
+            <input type="text" name="lastname"  id="lastname" class="form-control" placeholder="Enter lastname..."   [(ngModel)]="contactLastName"    formControlName="lastNameControl" >
+          
+            <input type="email" name="email"  id="email"  class="form-control"  placeholder="Enter email..." [(ngModel)]="contactEmail"    formControlName="emailControl" >
+
+        
+          
+        
+          
+                <select  id="das" class="form-control" [(ngModel)]="contactCountry"  formControlName="varietyControl">        
+                    <option id="country"value="" > --country--</option>
+                    <option  *ngFor="let variety of variety" id="archeva"  [value]="variety" > {{variety}}</option>    
+                </select>
+             
+                <div class="form-check form-check-inline" id="male">
+ 
+                    <label class="form-check-label" for="inlineRadio1">Male <span style="color: transparent;">1</span></label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    
+                  </div>
+
+                  <div class="form-check form-check-inline" id="female">
+
+                    <label class="form-check-label" for="inlineRadio2"> Female <span style="color: transparent;">1</span></label>
+
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    
+                  </div>
+            
+                  <br>
+
+                  <div class="form-check form-check-inline" id="agree">
+                     <label class="form-check-label" for="inlineCheckbox1">Agreements & Policies <span style="color: transparent;">1</span></label>
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    
+                  </div>
+
+                  <div class="form-group1"  id="textarea">
+                    
+                    <textarea  class="form-control" placeholder="Your message..." id="exampleFormControlTextarea1" ></textarea>
+                </div>
+              <br>
+              <button class="btn btn-dark form-control" id="button"  type="submit" (click)="sendContact()"> Send </button>
+              
+              <div *ngIf="showError" class="alert alert-secondary" role="alert">
+                <strong>მოხდა შეცდომა!</strong>  <button type="button" class="btn-close" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+              
+           </div>
+              
+        </form>
+         
+        
+     
+        
+     
+
+ </div>
+
+</div>
+
+
+
+</div>
+
+<app-footer></app-footer>

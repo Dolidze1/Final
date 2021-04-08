@@ -1,0 +1,59 @@
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+    background:no-repeat center center scroll;
+    -webkit-background-size: cover;
+    background-size: cover;
+    
+
+    
+}
+
+.carousel-inner{
+    background-size: cover;
+}
+
+.carousel-caption a{
+    
+    color: white;
+    text-decoration: none;
+    font-size: x-large ;
+    margin-bottom: 100px;
+    letter-spacing: 20px;
+}
+
+
+.carousel-item h5{
+    
+    padding-bottom: 50px;
+    letter-spacing: 20px;
+    color: white;
+    font-size: xx-large;
+
+}
+
+
+
+.carousel-caption{
+    bottom: 350px;
+    
+}
+
+.carousel-control-prev-icon{
+    display: none;
+}
+
+.carousel-control-next-icon{
+    display: none;
+}
+
+.carousel-inner img{
+    height: 100%;
+}
+
+
+.carousel-indicators{
+ 
+    display: none;
+   
+}
